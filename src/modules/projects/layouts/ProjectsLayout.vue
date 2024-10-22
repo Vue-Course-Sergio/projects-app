@@ -9,6 +9,6 @@
 </template>
 
 <script lang="ts" setup>
-import TopMenu from '@/modules/common/components/TopMenu.vue'
-import SideMenu from '../components/SideMenu.vue'
+import TopMenu from '@/modules/common/components/TopMenu.vue';
+import SideMenu from '../components/SideMenu.vue';
 </script>
