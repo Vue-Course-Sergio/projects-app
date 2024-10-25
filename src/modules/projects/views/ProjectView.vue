@@ -17,9 +17,16 @@
           </thead>
           <tbody>
             <tr v-for="task in project?.tasks" :key="task.id" class="hover">
-              <th>2</th>
+              <th>
+                <input
+                  type="checkbox"
+                  :checked="!!task.completedAt"
+                  class="checkbox checkbox-primary"
+                  @change="projectStore.toggleTask(project?.id ?? '', task.id)"
+                />
+              </th>
               <td>{{ task.name }}</td>
-              <td>Desktop Support Technician</td>
+              <td>{{ task.completedAt }}</td>
             </tr>
             <tr class="hover">
               <th></th>
