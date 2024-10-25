@@ -9,20 +9,20 @@
         <template v-if="project.tasks.length > 0">
           <details>
             <summary>
-              <RouterLink :to="`/projects/${project.id}`">
+              <RouterLink :to="`/project/${project.id}`">
                 {{ project.name }}
               </RouterLink>
             </summary>
             <ul>
               <li v-for="taks in project.tasks" :key="taks.id">
-                <RouterLink :to="`/projects/${project.id}`">{{ taks.name }}</RouterLink>
+                <RouterLink :to="`/project/${project.id}`">{{ taks.name }}</RouterLink>
               </li>
             </ul>
           </details>
         </template>
 
         <template v-else>
-          <RouterLink :to="`/projects/${project.id}`">
+          <RouterLink :to="`/project/${project.id}`">
             {{ project.name }}
           </RouterLink>
         </template>
